@@ -56,17 +56,19 @@ class BankAccount {
     }
 
     public double withdrawCash(double _amount) {
-        double withdrawn = 0;
+
         if (_amount > 0) {
             if (this.cash > _amount) {
                 this.cash -= _amount;
-                withdrawn = _amount;
+                return  _amount;
             } else {
                 this.cash = 0;
-                withdrawn = this.cash;
+                 return this.cash;
             }
+        } else {
+            throw new IllegalArgumentException();
         }
-        return withdrawn;
+
     }
 
     public String printInfo() {

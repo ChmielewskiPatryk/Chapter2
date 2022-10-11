@@ -1,4 +1,14 @@
 package org.example;
+//Stwórz klasę User, która ma spełniać następujące wymogi:
+//
+//Mieć prywatne atrybuty:
+//id - atrybut ten powinien trzymać numer identyfikacyjny,
+//firstName - atrybut określający imię,
+//lastName - atrybut określający nazwisko,
+//books - tablica obiektów klasy Book.
+//Posiadać konstruktor przyjmujący id, imię, nazwisko.
+//Dodaj metodę addBook(Book book), która doda nową książkę do tablicy książek danego użytkownika.
+//Zaimplementuj możliwość dynamicznej zmiany rozmiaru tablicy.
 
 import java.util.Arrays;
 
