@@ -13,37 +13,42 @@ package org.example;
 
 import java.util.Arrays;
 
-public class AdvancedCalculator extends Calculator{
+public class AdvancedCalculator extends Calculator {
     final static double PI = 3.14159265;
-    static String[] globalArr;
+    static String[] globalArr = new String[0];
 
     public double pow(double num1, double num2) {
-        double result = Math.pow(num1,num2);
-        addOperation( num1 + " ^ " + num2 + " equals " + result);
+        double result = Math.pow(num1, num2);
+        addOperation(num1 + " ^ " + num2 + " equals " + result);
         return result;
     }
+
     public double root(double num1, double num2) {
-        double result = Math.round(Math.pow(num1,(1/num2)));
-        addOperation( num2 + " root of " + num1 + " equals " + result);
+        double result = Math.round(Math.pow(num1, (1 / num2)));
+        addOperation(num2 + " root of " + num1 + " equals " + result);
         return result;
     }
-    public static double computeCircleArea(double r){
+
+    public static double computeCircleArea(double r) {
         // metoda nie może dodawać do tablicy bo jest static, więc mozemy z niej korzystać bez utworzenia obiektu
         // i przez to nie bedzie utworzona tablica
-        return 2*PI*r;
+        return 2 * PI * r;
     }
 
     @Override
     public String[] addOperation(String text) {
-        return super.addOperation(text);
+        String[] toReturn = super.addOperation(text);
         globalArr = Arrays.copyOf(globalArr, globalArr.length + 1);
         globalArr[globalArr.length - 1] = text;
+        return toReturn;
     }
 
-    public static void printGlobalOperations(){
-        for(String item : globalArr){
+    public static void printGlobalOperations() {
+        for (String item : globalArr) {
             System.out.println(item);
         }
-    };
+    }
+
+    ;
 
 }
