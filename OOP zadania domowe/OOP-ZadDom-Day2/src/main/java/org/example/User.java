@@ -49,6 +49,6 @@ public class User extends Person {
         for (Book book : books){
             book.setAvailable(true);
         }
+        books = new Book[0];
     }
-
 }
