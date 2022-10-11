@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 public class Calculator {
     String[] arr;
+    static String[] globalArr;
+
 
     public Calculator() {
         arr = new String[0];
@@ -41,6 +43,8 @@ public class Calculator {
     public String[] addOperation(String text) {
         this.arr = Arrays.copyOf(this.arr, this.arr.length + 1);
         this.arr[this.arr.length - 1] = text;
+        this.globalArr = Arrays.copyOf(this.globalArr, this.globalArr.length + 1);
+        this.globalArr[this.globalArr.length - 1] = text;
         return this.arr;
     }
 

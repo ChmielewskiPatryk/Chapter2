@@ -13,7 +13,7 @@ package org.example;
 
 public class AdvancedCalculator extends Calculator{
     final static double PI = 3.14159265;
-    static String[] globalArr = ;
+    static String[] globalArr;
 
     public double pow(double num1, double num2) {
         double result = Math.pow(num1,num2);
