@@ -11,6 +11,8 @@
 //statyczną metodę printGlobalOperations(), która będzie wyświetlała wszystkie operacje ze wszystkich obiektów klasy AdvancedCalculator.
 package org.example;
 
+import java.util.Arrays;
+
 public class AdvancedCalculator extends Calculator{
     final static double PI = 3.14159265;
     static String[] globalArr;
@@ -31,9 +33,17 @@ public class AdvancedCalculator extends Calculator{
         return 2*PI*r;
     }
 
+    @Override
+    public String[] addOperation(String text) {
+        return super.addOperation(text);
+        globalArr = Arrays.copyOf(globalArr, globalArr.length + 1);
+        globalArr[globalArr.length - 1] = text;
+    }
 
     public static void printGlobalOperations(){
-
+        for(String item : globalArr){
+            System.out.println(item);
+        }
     };
 
 }
