@@ -45,8 +45,6 @@ public class Main7 {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
     }
     public static void deleteCinema(Connection con) throws SQLException{
         String QUERY = "DELETE from cinemas WHERE id = ?";
