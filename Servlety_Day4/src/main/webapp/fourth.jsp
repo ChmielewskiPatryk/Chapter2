@@ -8,11 +8,12 @@
 <%--W dowolnym servlecie utwórz ciasteczko o nazwie foo oraz wartości bar.--%>
 <%--W pliku fourth.jsp wyświetl wartość utworzonego ciasteczka.--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page isELIgnored="false" %>
 <html>
 <head>
     <title>Title</title>
 </head>
 <body>
-
+${cookie.test.value}
 </body>
 </html>
