@@ -1,5 +1,0 @@
-1) Wykonaj fork tego repozytorium
-2) Stwórz wewnątrz folderu projekt
-3) Wykonaj zadania
-4) Stwórz pull request do orginalnego repo( jeżeli nie wiesz czym jest PR - https://www.youtube.com/watch?v=VsaiEXGjjkI)
-5) Pamiętaj by nad danym zadaniem dodać treść poleceniea :)
