@@ -10,6 +10,5 @@ public class Burger {
     }
     public static void main(String[] args){
         Burger burger = new Burger("200 g", "35 zł");
-
     }
 }

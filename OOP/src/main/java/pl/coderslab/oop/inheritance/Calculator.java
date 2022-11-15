@@ -2,7 +2,7 @@ import java.security.PublicKey;
 import java.util.Arrays;
 
 public class Calculator {
-    public double num1;
+    double num1;
     public double num2;
     public String[] cal;
 
@@ -41,14 +41,14 @@ public class Calculator {
         return result;
     }
 
-    private String[] operation(String text) {
+    protected String[] operation(String text) {
         this.cal = Arrays.copyOf(this.cal, this.cal.length + 1);
         this.cal[this.cal.length - 1] = text;
-        return this.cal;
+        return cal;
     }
 
     public void printOperations() {
-        for (String item : this.cal) {
+        for (String item : cal) {
             System.out.println(item);
         }
     }

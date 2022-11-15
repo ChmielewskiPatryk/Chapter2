@@ -2,8 +2,6 @@ import java.util.Arrays;
 
 class ZadUser{
     public static void main(String[] args) {
-
-
     }
 }
     public class User {
